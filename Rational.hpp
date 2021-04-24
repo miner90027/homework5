@@ -1,6 +1,12 @@
 //
-// Created by Chris Hartman on 2/18/21.
+// Originaly Created by Chris Hartman on 2/18/21.
 //
+/* Aleks McCormick
+ * UAF CS 202
+ * Homework 5
+ * PROGRAM NAME: Template Rational class
+ * 04/24/2021
+ */
 
 #ifndef CS202CLASSEXAMPLE_RATIONAL_HPP
 #define CS202CLASSEXAMPLE_RATIONAL_HPP

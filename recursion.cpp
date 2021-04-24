@@ -11,12 +11,12 @@ using std::endl;
 
 unsigned long fib(unsigned long n);
 unsigned long fib_loop(unsigned long n);
-unsigned long ack(unsigned long m, unsigned long n);
+unsigned long long ack(unsigned long long m, unsigned long long n);
 
 int main() {
 	unsigned long n = 80;
-	unsigned long a = 4;
-	unsigned long b = 0;
+	unsigned long long a = 4;
+	unsigned long long b = 0;
 
 	StopWatch timer;
 	cout << "fib(" << n << ") = " << fib(n) << endl;
@@ -54,7 +54,7 @@ unsigned long fib_loop(unsigned long n){
 	return sum;
 }
 
-unsigned long ack(unsigned long m, unsigned long n){
+unsigned long long ack(unsigned long long m, unsigned long long n){
 	if(m == 0)
 		return n+1;
 	else if(m > 0 && n == 0)

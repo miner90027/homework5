@@ -11,14 +11,28 @@ using std::endl;
 
 int fib(int n);
 int fib_loop(int n);
-int ack(int m, int n);
+unsigned long ack(unsigned long m, unsigned long n);
 
 int main() {
-	/*
-	cout << fib(5) << endl;
-	cout << fib_loop(5) << endl;
-	*/
-	cout << ack(3, 1) << endl;
+	int n = 5;
+	unsigned long a = 4;
+	unsigned long b = 0;
+
+	StopWatch timer;
+	cout << "fib(" << n << ") = " << fib(n) << endl;
+	timer.stop();
+	cout << "Calculated the " << n << "th number of the Fibonacci Sequence using recursion in " << timer.getTimeMilli() <<" milli-seconds." << endl;
+
+	timer.start();
+	cout << "fib_loop(" << n << ") = " << fib_loop(n) << endl;
+	timer.stop();
+	cout << "Calculated the " << n << "th number of the Fibonacci Sequence using iteration in " << timer.getTimeMilli() <<" milli-seconds." << endl;
+
+	timer.start();
+	cout << "ack("<<a<<","<<b<<") = " << ack(a, b) << endl;
+	timer.stop();
+	cout << "Calculated the Ackermann's number using the inputs ("<< a << ", "<< b << ") in " << timer.getTimeMilli() <<" milli-seconds." << endl;
+
 	return 0;
 }
 
@@ -40,7 +54,7 @@ int fib_loop(int n){
 	return sum;
 }
 
-int ack(int m, int n){
+unsigned long ack(unsigned long m, unsigned long n){
 	if(m == 0)
 		return n+1;
 	else if(m > 0 && n == 0)

@@ -1,6 +1,9 @@
 #include <iostream>
+#include "Rational.hpp"
 
 int main() {
-	std::cout << "Hello, World!" << std::endl;
+	Rational x(9,3);
+
+	std::cout << x << std::endl;
 	return 0;
 }

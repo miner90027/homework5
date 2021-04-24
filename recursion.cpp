@@ -9,12 +9,12 @@
 using std::cout;
 using std::endl;
 
-int fib(int n);
-int fib_loop(int n);
+unsigned long fib(unsigned long n);
+unsigned long fib_loop(unsigned long n);
 unsigned long ack(unsigned long m, unsigned long n);
 
 int main() {
-	int n = 5;
+	unsigned long n = 80;
 	unsigned long a = 4;
 	unsigned long b = 0;
 
@@ -36,13 +36,13 @@ int main() {
 	return 0;
 }
 
-int fib(int n){
+unsigned long fib(unsigned long n){
 	if(n <= 1) return n;
 	return (fib(n-1) + fib(n-2));
 }
 
-int fib_loop(int n){
-	int sum = 0;
+unsigned long fib_loop(unsigned long n){
+	unsigned long sum = 0;
 	int n1 = 0;
 	int n2 = 1;
 

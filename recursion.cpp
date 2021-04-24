@@ -6,13 +6,19 @@
  */
 #include <iostream>
 #include "StopWatch.hpp"
+using std::cout;
+using std::endl;
+
 int fib(int n);
 int fib_loop(int n);
-
+int ack(int m, int n);
 
 int main() {
-	std::cout << fib(5) << std::endl;
-	std::cout << fib_loop(5) << std::endl;
+	/*
+	cout << fib(5) << endl;
+	cout << fib_loop(5) << endl;
+	*/
+	cout << ack(3, 1) << endl;
 	return 0;
 }
 
@@ -32,4 +38,13 @@ int fib_loop(int n){
 		n2 = sum;
 	}
 	return sum;
+}
+
+int ack(int m, int n){
+	if(m == 0)
+		return n+1;
+	else if(m > 0 && n == 0)
+		return ack(m-1,1);
+	else
+		return ack(m -1,ack(m,n-1));
 }

@@ -23,9 +23,9 @@ class Rational {
    friend std::ostream& operator<<(std::ostream &, const Rational<T> &rhs);
 
     template<typename T>
-   friend Rational operator+(const Rational<T> &lhs, const Rational<T> &rhs);
+   friend Rational<T> operator+(const Rational<T> &lhs, const Rational<T> &rhs);
 	template<typename T>
-   friend Rational operator-(const Rational<T> &lhs);
+   friend Rational<T> operator-(const Rational<T> &lhs);
 	template<typename T>
    friend bool operator==(const Rational<T> &lhs, const Rational<T> &rhs);
 	template<typename T>

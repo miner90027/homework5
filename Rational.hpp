@@ -119,6 +119,7 @@ template<typename Type>
 Rational<Type> &Rational<Type>::operator*=(const Rational<Type> &rhs) {
 	_numerator *= rhs._numerator;
 	_denominator *= rhs._denominator;
+	reduce();
 	return *this;
 }
 

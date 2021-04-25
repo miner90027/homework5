@@ -32,7 +32,7 @@ class Rational {
    friend bool operator<(const Rational<T> &lhs, const Rational<T> &rhs);
 
 public:
-   Rational(Type num,Type den = 1); //NOLINT(google-explicit-constructor): Allow implicit conversion from int
+   Rational(Type num = (Type) 0,Type den = (Type)1); //NOLINT(google-explicit-constructor): Allow implicit conversion from int
    Rational & operator+=(const Rational<Type>& rhs);
    Rational & operator-=(const Rational<Type>& rhs);
    Rational & operator*=(const Rational<Type>& rhs);

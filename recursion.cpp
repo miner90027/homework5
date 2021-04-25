@@ -14,8 +14,8 @@ unsigned long long fib_loop(unsigned long long n);
 unsigned long long ack(unsigned long long m, unsigned long long n);
 
 int main() {
-	unsigned long long n = 93;
-	unsigned long long a = 5;
+	unsigned long long n = 50;
+	unsigned long long a = 4;
 	unsigned long long b = 0;
 
 	StopWatch timer;

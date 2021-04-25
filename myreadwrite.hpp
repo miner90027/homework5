@@ -15,7 +15,7 @@ void myWrite(std::ofstream &file, const Type &t){
 }
 
 template<typename Type>
-void myRead(std::ifstream &file, const Type &t){
+void myRead(std::ifstream &file,Type &t){
 	file.read(reinterpret_cast<char *>(&t),sizeof(t));
 }
 #endif //HOMEWORK5_MYREADWRITE_HPP

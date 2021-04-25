@@ -9,16 +9,17 @@
 using std::cout;
 using std::endl;
 
-unsigned long fib(unsigned long n);
-unsigned long fib_loop(unsigned long n);
+unsigned long long fib(unsigned long long n);
+unsigned long long fib_loop(unsigned long long n);
 unsigned long long ack(unsigned long long m, unsigned long long n);
 
 int main() {
-	unsigned long n = 80;
-	unsigned long long a = 4;
+	unsigned long long n = 93;
+	unsigned long long a = 5;
 	unsigned long long b = 0;
 
 	StopWatch timer;
+
 	cout << "fib(" << n << ") = " << fib(n) << endl;
 	timer.stop();
 	cout << "Calculated the " << n << "th number of the Fibonacci Sequence using recursion in " << timer.getTimeMilli() <<" milli-seconds." << endl;
@@ -36,15 +37,15 @@ int main() {
 	return 0;
 }
 
-unsigned long fib(unsigned long n){
+unsigned long long fib(unsigned long long n){
 	if(n <= 1) return n;
 	return (fib(n-1) + fib(n-2));
 }
 
-unsigned long fib_loop(unsigned long n){
-	unsigned long sum = 0;
-	int n1 = 0;
-	int n2 = 1;
+unsigned long long fib_loop(unsigned long long n){
+	unsigned long long sum = 0;
+	unsigned long long n1 = 0;
+	unsigned long long n2 = 1;
 
 	for(int i = 2; i <= n; i++){
 		sum = n1 + n2;
